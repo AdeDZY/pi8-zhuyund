@@ -91,9 +91,9 @@ You need to implement the types requried for your ranking model.</description>
           <rangeTypeName>uima.cas.String</rangeTypeName>
         </featureDescription>
       <featureDescription>
-          <name>question</name>
+          <name>questionId</name>
           <description>This denotes the corresponding question ID.</description>
-          <rangeTypeName>type.Question</rangeTypeName>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
         </featureDescription>
       </features>
     </typeDescription>
@@ -118,6 +118,30 @@ You need to implement the types requried for your ranking model.</description>
           <rangeTypeName>uima.cas.Integer</rangeTypeName>
         </featureDescription>
         </features>
+    </typeDescription>
+  <typeDescription>
+      <name>type.TokennizedQuestion</name>
+      <description>Question with tokens</description>
+      <supertypeName>type.Question</supertypeName>
+      <features>
+        <featureDescription>
+          <name>tokens</name>
+          <description/>
+          <rangeTypeName>uima.cas.StringList</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>type.TokennizedPassage</name>
+      <description>Passage with tokens</description>
+      <supertypeName>type.Passage</supertypeName>
+      <features>
+        <featureDescription>
+          <name>tokens</name>
+          <description/>
+          <rangeTypeName>uima.cas.StringList</rangeTypeName>
+        </featureDescription>
+      </features>
     </typeDescription>
   </types>
 </typeSystemDescription>

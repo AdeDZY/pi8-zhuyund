@@ -7,6 +7,7 @@ import org.apache.uima.jcas.JCas;
 
 import type.Measurement;
 import type.Question;
+import type.TokennizedQuestion;
 
 public class QuestionAnnotator extends JCasAnnotator_ImplBase {
 
@@ -23,7 +24,7 @@ public class QuestionAnnotator extends JCasAnnotator_ImplBase {
     int pos = 0;
     while (matcher.find(pos)) {
       // found one - create annotation
-      Question annotation = new Question(aJCas);
+      TokennizedQuestion annotation = new TokennizedQuestion(aJCas);
       annotation.setBegin(matcher.start());
       annotation.setEnd(matcher.end());
       annotation.setId(matcher.group(1));
@@ -32,7 +33,7 @@ public class QuestionAnnotator extends JCasAnnotator_ImplBase {
       annotation.setMeasurement(new Measurement(aJCas));
       annotation.addToIndexes();
       pos = matcher.end();
-      // System.out.printf("Added Q: %s - %s\n", matcher.group(1), matcher.group(2));
+      //System.out.printf("Added Q: %s - %s\n", matcher.group(1), matcher.group(2));
     }
   }
 

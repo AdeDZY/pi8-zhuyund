@@ -10,8 +10,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** Stores the information of the passage.
- * Updated by JCasGen Mon Oct 12 15:10:51 EDT 2015
- * XML source: /home/junaraki/git/f15-11-791/template-projects/pi7/pi7-andrewid/src/main/resources/descriptors/typeSystem.xml
+ * Updated by JCasGen Sun Oct 18 15:12:09 EDT 2015
+ * XML source: /Users/zhuyund/Documents/workspace/pi7-zhuyund/src/main/resources/descriptors/typeSystem.xml
  * @generated */
 public class Passage extends ComponentAnnotation {
   /** @generated
@@ -142,25 +142,25 @@ public class Passage extends ComponentAnnotation {
    
     
   //*--------------*
-  //* Feature: question
+  //* Feature: questionId
 
-  /** getter for question - gets This denotes the corresponding question ID.
+  /** getter for questionId - gets This denotes the corresponding question ID.
    * @generated
    * @return value of the feature 
    */
-  public Question getQuestion() {
-    if (Passage_Type.featOkTst && ((Passage_Type)jcasType).casFeat_question == null)
-      jcasType.jcas.throwFeatMissing("question", "type.Passage");
-    return (Question)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Passage_Type)jcasType).casFeatCode_question)));}
+  public String getQuestionId() {
+    if (Passage_Type.featOkTst && ((Passage_Type)jcasType).casFeat_questionId == null)
+      jcasType.jcas.throwFeatMissing("questionId", "type.Passage");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((Passage_Type)jcasType).casFeatCode_questionId);}
     
-  /** setter for question - sets This denotes the corresponding question ID. 
+  /** setter for questionId - sets This denotes the corresponding question ID. 
    * @generated
    * @param v value to set into the feature 
    */
-  public void setQuestion(Question v) {
-    if (Passage_Type.featOkTst && ((Passage_Type)jcasType).casFeat_question == null)
-      jcasType.jcas.throwFeatMissing("question", "type.Passage");
-    jcasType.ll_cas.ll_setRefValue(addr, ((Passage_Type)jcasType).casFeatCode_question, jcasType.ll_cas.ll_getFSRef(v));}    
+  public void setQuestionId(String v) {
+    if (Passage_Type.featOkTst && ((Passage_Type)jcasType).casFeat_questionId == null)
+      jcasType.jcas.throwFeatMissing("questionId", "type.Passage");
+    jcasType.ll_cas.ll_setStringValue(addr, ((Passage_Type)jcasType).casFeatCode_questionId, v);}    
   }
 
     

@@ -9,6 +9,10 @@
     <delegateAnalysisEngine key="passageAnnotatorDescriptor">
       <import name="descriptors.passageAnnotatorDescriptor"/>
     </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="tokenAnnotatorDescriptor">
+      <import location="tokenAnnotatorDescriptor.xml"/>
+    
+    </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>aaeDescriptor</name>
@@ -21,6 +25,7 @@
       <fixedFlow>
         <node>questionAnnotatorDescriptor</node>
         <node>passageAnnotatorDescriptor</node>
+      <node>tokenAnnotatorDescriptor</node>
       </fixedFlow>
     </flowConstraints>
     <typePriorities/>
