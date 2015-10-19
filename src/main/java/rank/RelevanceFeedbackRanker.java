@@ -44,24 +44,6 @@ public class RelevanceFeedbackRanker extends AbstractRanker {
   }
   
   /**
-   * Sorts the given list of passages associated with the given question, and returns a ranked list
-   * of passages. 
-   * 
-   * @param question
-   * @param passages
-   */
-  @Override
-  public List<Passage> rank(Question question, List<Passage> passages) {
-    this.init(question, passages);
-    for(Passage passage:passages){
-      passage.setScore(this.score(question, passage));
-    }
-    List<Passage> rankedPassages = new ArrayList<Passage>(passages);
-    Collections.sort(rankedPassages, new PassageComparator());
-    return rankedPassages;
-  }
-
-  /**
    * Returns a score of the given passage associated with the given question.
    * 
    * @param question
@@ -81,6 +63,7 @@ public class RelevanceFeedbackRanker extends AbstractRanker {
    * @param question
    * @param passages
    */
+  @Override
   protected void init(Question question, List<Passage> passages) {
     // clear previous results
     this.terms.clear();

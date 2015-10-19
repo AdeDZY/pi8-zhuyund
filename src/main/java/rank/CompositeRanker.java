@@ -20,25 +20,8 @@ public class CompositeRanker extends AbstractRanker implements IAggregator {
   public void addRanker(IRanker ranker) {
     rankers.add(ranker);
   }
-
-  /**
-   * Sorts the given list of passages associated with the given question, and returns a ranked list
-   * of passages. 
-   * 
-   * @param question
-   * @param passages
-   */
-  @Override
-  public List<Passage> rank(Question question, List<Passage> passages) {
-    System.out.println(question.getId());
-    for(Passage passage:passages){
-      passage.setScore(this.score(question, passage));
-    }
-    List<Passage> rankedPassages = new ArrayList<Passage>(passages);
-    Collections.sort(rankedPassages, new PassageComparator());
-    return rankedPassages;
-  }
-
+  
+  
   
   /**
    * Returns a score of the given passage associated with the given question.
@@ -66,6 +49,5 @@ public class CompositeRanker extends AbstractRanker implements IAggregator {
   public Double aggregateScores(List<Double> scores) {
     double w1 = 0.5, w2 = 0.5;
     return w1 * scores.get(0) + w2 * scores.get(1);
-    
   }
 }

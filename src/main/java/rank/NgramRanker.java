@@ -15,7 +15,7 @@ import type.TokennizedQuestion;
 
 public class NgramRanker extends AbstractRanker {
 
-  private int n = 2;
+  private int n;
   
   /**
    * By default n = 2
@@ -32,23 +32,6 @@ public class NgramRanker extends AbstractRanker {
     this.n = n;
   }
   
-  /**
-   * Sorts the given list of passages associated with the given question, and returns a ranked list
-   * of passages. 
-   * 
-   * @param question
-   * @param passages
-   */
-  @Override
-  public List<Passage> rank(Question question, List<Passage> passages) {
-    for(Passage passage:passages){
-      passage.setScore(this.score(question, passage));
-    }
-    List<Passage> rankedPassages = new ArrayList<Passage>(passages);
-    Collections.sort(rankedPassages, new PassageComparator());
-    return rankedPassages;
-  }
-
   /**
    * Returns a score of the given passage associated with the given question.
    * 

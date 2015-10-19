@@ -25,6 +25,7 @@ import rank.AbstractRanker;
 import rank.CompositeRanker;
 import rank.IRanker;
 import rank.NgramRanker;
+import rank.RankerFactory;
 import rank.RelevanceFeedbackRanker;
 import type.Measurement;
 import type.Passage;
@@ -56,9 +57,9 @@ public class PassageRankingWriter extends CasConsumer_ImplBase {
     }
 
     // Initialize rankers
-    compositeRanker = new CompositeRanker();
-    ngramRanker = new NgramRanker();
-    otherRanker = new RelevanceFeedbackRanker();
+    compositeRanker = (CompositeRanker)RankerFactory.createRanker("CompositeRanker");
+    ngramRanker = RankerFactory.createRanker("NgramRanker");
+    otherRanker = RankerFactory.createRanker("RelevanceFeedbackRanker");
     compositeRanker.addRanker(ngramRanker);
     compositeRanker.addRanker(otherRanker);
   }
