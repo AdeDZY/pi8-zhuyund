@@ -4,7 +4,15 @@ AAE is deployed remotely
 
 ##Install
 
+```{r, engine='bash', count_lines}
 mvn install
+```
+
+##Deploy
+
+```{r, engine='bash', count_lines}
+./deployRankerAs.sh
+```
 
 ##Execute
 

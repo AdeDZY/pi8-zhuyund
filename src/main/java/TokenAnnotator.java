@@ -19,6 +19,7 @@ import org.apache.uima.jcas.cas.StringList;
 
 import type.TokennizedPassage;
 import type.TokennizedQuestion;
+
 import edu.stanford.nlp.ling.Word;
 import edu.stanford.nlp.process.Tokenizer;
 import edu.stanford.nlp.process.TokenizerFactory;
@@ -39,7 +40,7 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
 
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
-    System.out.println(">> Tokenizing...");
+    System.out.print(">> Tokenizing...");
     // read stop words
     this.stopWords = this.readStopWords(this.stopFilePath);
 
@@ -51,6 +52,7 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
     TokenizerFactory<Word> factory = PTBTokenizerFactory.newTokenizerFactory();
 
     // tokenize the question
+    
     Iterator questionIter = questionIndex.iterator();
     while (questionIter.hasNext()) {
       TokennizedQuestion question = (TokennizedQuestion) questionIter.next();
@@ -83,6 +85,8 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
       StringList strList = FSListFactory.createStringList(aJCas, cleanedTokens);
       passage.setTokens(strList);
     }
+    
+    System.out.println("Tokenizing Completed.Transmitting CAS...");
   }
 
   /***
