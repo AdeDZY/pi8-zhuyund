@@ -8,9 +8,9 @@
         </collectionIterator>
     </collectionReader>
     <casProcessors casPoolSize="3" processingUnitThreadCount="1">
-    <casProcessor deployment="integrated" name="aaeDescriptor">
+    <casProcessor deployment="integrated" name="aaeRemoteRanker">
         <descriptor>
-            <import location="aaeDescriptor.xml"/>
+            <import location="aaeRemoteRanker.xml"/>
         </descriptor>
             <deploymentParameters/>
         <errorHandling>
