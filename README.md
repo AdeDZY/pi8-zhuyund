@@ -16,4 +16,6 @@ mvn install
 
 ##Execute
 
+```{r, engine='bash', count_lines}
 mvn exec:java -Dexec.mainClass="Main" -Dexec.args="<input directory> <output directory>"
+```
