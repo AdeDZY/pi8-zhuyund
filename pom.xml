@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>edu.cmu.cs.lti.f15</groupId>
-	<artifactId>pi7-andrewid</artifactId>
+	<artifactId>pi7-zhuyund</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>PI7 Template</name>
 	<description>DEIIS template project for PI7</description>
@@ -56,6 +56,11 @@
 			<groupId>org.apache.uima</groupId>
 			<artifactId>uimafit-core</artifactId>
 			<version>2.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>edu.stanford.nlp</groupId>
+			<artifactId>stanford-corenlp</artifactId>
+			<version>3.5.2</version>
 		</dependency>
 	</dependencies>
 </project>
