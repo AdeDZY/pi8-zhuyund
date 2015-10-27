@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** Passage with tokens
- * Updated by JCasGen Mon Oct 26 21:36:49 EDT 2015
+ * Updated by JCasGen Mon Oct 26 22:03:50 EDT 2015
  * @generated */
 public class TokennizedPassage_Type extends Passage_Type {
   /** @generated 
@@ -44,30 +44,6 @@ public class TokennizedPassage_Type extends Passage_Type {
      @modifiable */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("type.TokennizedPassage");
- 
-  /** @generated */
-  final Feature casFeat_tokens;
-  /** @generated */
-  final int     casFeatCode_tokens;
-  /** @generated
-   * @param addr low level Feature Structure reference
-   * @return the feature value 
-   */ 
-  public int getTokens(int addr) {
-        if (featOkTst && casFeat_tokens == null)
-      jcas.throwFeatMissing("tokens", "type.TokennizedPassage");
-    return ll_cas.ll_getRefValue(addr, casFeatCode_tokens);
-  }
-  /** @generated
-   * @param addr low level Feature Structure reference
-   * @param v value to set 
-   */    
-  public void setTokens(int addr, int v) {
-        if (featOkTst && casFeat_tokens == null)
-      jcas.throwFeatMissing("tokens", "type.TokennizedPassage");
-    ll_cas.ll_setRefValue(addr, casFeatCode_tokens, v);}
-    
-  
  
   /** @generated */
   final Feature casFeat_strTokens;
@@ -103,10 +79,6 @@ public class TokennizedPassage_Type extends Passage_Type {
   public TokennizedPassage_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
-
- 
-    casFeat_tokens = jcas.getRequiredFeatureDE(casType, "tokens", "uima.cas.StringList", featOkTst);
-    casFeatCode_tokens  = (null == casFeat_tokens) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_tokens).getCode();
 
  
     casFeat_strTokens = jcas.getRequiredFeatureDE(casType, "strTokens", "uima.cas.String", featOkTst);

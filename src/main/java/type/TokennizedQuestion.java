@@ -11,7 +11,7 @@ import org.apache.uima.jcas.cas.StringList;
 
 
 /** Question with tokens
- * Updated by JCasGen Mon Oct 26 21:36:49 EDT 2015
+ * Updated by JCasGen Mon Oct 26 22:03:50 EDT 2015
  * XML source: /Users/zhuyund/Documents/workspace/pi8-zhuyund/src/main/resources/descriptors/typeSystem.xml
  * @generated */
 public class TokennizedQuestion extends Question {
@@ -75,28 +75,6 @@ public class TokennizedQuestion extends Question {
   private void readObject() {/*default - does nothing empty block */}
      
  
-    
-  //*--------------*
-  //* Feature: tokens
-
-  /** getter for tokens - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public StringList getTokens() {
-    if (TokennizedQuestion_Type.featOkTst && ((TokennizedQuestion_Type)jcasType).casFeat_tokens == null)
-      jcasType.jcas.throwFeatMissing("tokens", "type.TokennizedQuestion");
-    return (StringList)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((TokennizedQuestion_Type)jcasType).casFeatCode_tokens)));}
-    
-  /** setter for tokens - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setTokens(StringList v) {
-    if (TokennizedQuestion_Type.featOkTst && ((TokennizedQuestion_Type)jcasType).casFeat_tokens == null)
-      jcasType.jcas.throwFeatMissing("tokens", "type.TokennizedQuestion");
-    jcasType.ll_cas.ll_setRefValue(addr, ((TokennizedQuestion_Type)jcasType).casFeatCode_tokens, jcasType.ll_cas.ll_getFSRef(v));}    
-   
     
   //*--------------*
   //* Feature: strTokens

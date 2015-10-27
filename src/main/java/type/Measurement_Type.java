@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 /** 
- * Updated by JCasGen Mon Oct 26 21:36:49 EDT 2015
+ * Updated by JCasGen Mon Oct 26 22:03:50 EDT 2015
  * @generated */
 public class Measurement_Type extends TOP_Type {
   /** @generated 

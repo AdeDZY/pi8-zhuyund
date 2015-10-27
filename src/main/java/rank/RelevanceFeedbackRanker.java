@@ -1,10 +1,7 @@
 package rank;
 
-import myutil.FSListFactory;
-import myutil.PassageComparator;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -78,11 +75,9 @@ public class RelevanceFeedbackRanker extends AbstractRanker {
     HashMap<String, Integer> counter = new HashMap<String, Integer>();
     for (int i = 0; i < ngramRankedPassages.size() && i < this.nTop; i++) {
      
-      TokennizedPassage passage = (TokennizedPassage) ngramRankedPassages.get(i);
-            
-      Collection<String> tokens = FSListFactory.createCollection(passage.getTokens(), null);
-      String[] arrTokens = tokens.toArray(new String[0]);
-      for (int j = 0; j < tokens.size(); j++) {
+      TokennizedPassage passage = (TokennizedPassage) ngramRankedPassages.get(i);         
+      String[] arrTokens = passage.getStrTokens().split(" ");
+      for (int j = 0; j < arrTokens.length; j++) {
         if (counter.containsKey(arrTokens[j]))
           counter.put(arrTokens[j], counter.get(arrTokens[j]) + 1);
         else
@@ -112,9 +107,8 @@ public class RelevanceFeedbackRanker extends AbstractRanker {
    */
   protected HashMap<String, Integer> getPassageVec1Gram(TokennizedPassage passage) {
     HashMap<String, Integer> passageVector = new HashMap<String, Integer>();
-    Collection<String> passageTokens = FSListFactory.createCollection(passage.getTokens(), null);
-    String[] arrTokens = passageTokens.toArray(new String[0]);
-    for (int i = 0; i < passageTokens.size(); i++) {
+    String[] arrTokens = passage.getStrTokens().split(" ");
+    for (int i = 0; i < arrTokens.length; i++) {
       passageVector.put(arrTokens[i], 1);
     }
     return passageVector;

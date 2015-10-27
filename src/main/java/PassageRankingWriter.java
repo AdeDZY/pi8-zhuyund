@@ -118,8 +118,7 @@ public class PassageRankingWriter extends CasConsumer_ImplBase {
         List<Passage> passages = questionPassages.get(question.getId());
         
         // for pi8, only use the composite ranker
-       // List<Passage> compositeRankedPassages = compositeRanker.rank(question, passages);
-        List<Passage> compositeRankedPassages = ngramRanker.rank(question, passages);
+        List<Passage> compositeRankedPassages = compositeRanker.rank(question, passages);
         List<List<Passage>> results = new ArrayList<List<Passage>>();      
         results.add(compositeRankedPassages);
 
