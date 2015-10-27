@@ -64,8 +64,9 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
         strTokens.add(token.toString().toLowerCase());
       }
       ArrayList<String> cleanedTokens = this.removeStopWords(strTokens);
-      StringList strList = FSListFactory.createStringList(aJCas, cleanedTokens);
-      question.setTokens(strList);
+      // StringList strList = FSListFactory.createStringList(aJCas, cleanedTokens);
+      // question.setTokens(strList);
+      question.setStrTokens(String.join(" ", cleanedTokens));
     }
 
     // tokenize answers
@@ -82,8 +83,9 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
         strTokens.add(token.toString().toLowerCase());
       }
       ArrayList<String> cleanedTokens = this.removeStopWords(strTokens);
-      StringList strList = FSListFactory.createStringList(aJCas, cleanedTokens);
-      passage.setTokens(strList);
+      // StringList strList = FSListFactory.createStringList(aJCas, cleanedTokens);
+      // passage.setTokens(strList);
+      passage.setStrTokens(String.join(" ", cleanedTokens));
     }
     
     System.out.println("Tokenizing Completed.Transmitting CAS...");

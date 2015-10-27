@@ -11,8 +11,8 @@ import org.apache.uima.jcas.cas.FSList;
 
 
 /** Stores all the questions and its associated answer candidates.
- * Updated by JCasGen Sun Oct 18 15:12:09 EDT 2015
- * XML source: /Users/zhuyund/Documents/workspace/pi7-zhuyund/src/main/resources/descriptors/typeSystem.xml
+ * Updated by JCasGen Mon Oct 26 21:36:48 EDT 2015
+ * XML source: /Users/zhuyund/Documents/workspace/pi8-zhuyund/src/main/resources/descriptors/typeSystem.xml
  * @generated */
 public class InputDocument extends ComponentAnnotation {
   /** @generated

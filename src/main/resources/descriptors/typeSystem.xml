@@ -129,6 +129,11 @@ You need to implement the types requried for your ranking model.</description>
           <description/>
           <rangeTypeName>uima.cas.StringList</rangeTypeName>
         </featureDescription>
+      <featureDescription>
+          <name>strTokens</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
       </features>
     </typeDescription>
     <typeDescription>
@@ -140,6 +145,11 @@ You need to implement the types requried for your ranking model.</description>
           <name>tokens</name>
           <description/>
           <rangeTypeName>uima.cas.StringList</rangeTypeName>
+        </featureDescription>
+      <featureDescription>
+          <name>strTokens</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
         </featureDescription>
       </features>
     </typeDescription>

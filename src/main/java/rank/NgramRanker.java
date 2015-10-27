@@ -52,9 +52,10 @@ public class NgramRanker extends AbstractRanker {
    */
   protected HashMap<String, Integer> getQuestionVec(TokennizedQuestion question, int n) {
     HashMap<String, Integer> questionVector = new HashMap<String, Integer>();
-    Collection<String> tokens = FSListFactory.createCollection(question.getTokens(), null);
-    String[] arrTokens = tokens.toArray(new String[0]);
-    for(int i = 0; i <= tokens.size() - n; i++){
+    // Collection<String> tokens = FSListFactory.createCollection(question.getTokens(), null);
+    // String[] arrTokens = tokens.toArray(new String[0]);
+    String[] arrTokens = question.getStrTokens().split(" ");
+    for(int i = 0; i <= arrTokens.length - n; i++){
       String grams = "";
       for(int j = 0; j < n; j++)
         grams += arrTokens[i + j] + ' ';
@@ -71,9 +72,10 @@ public class NgramRanker extends AbstractRanker {
    */
   protected HashMap<String, Integer> getPassageVec(TokennizedPassage passage, int n) {
     HashMap<String, Integer> passageVector = new HashMap<String, Integer>();
-    Collection<String> passageTokens = FSListFactory.createCollection(passage.getTokens(), null);
-    String[] arrTokens = passageTokens.toArray(new String[0]);
-    for(int i = 0; i <= passageTokens.size() - n; i++){
+    // Collection<String> passageTokens = FSListFactory.createCollection(passage.getTokens(), null);
+    // String[] arrTokens = passageTokens.toArray(new String[0]);
+    String[] arrTokens = passage.getStrTokens().split(" ");
+    for(int i = 0; i <= arrTokens.length - n; i++){
       String grams = "";
       for(int j = 0; j < n; j++)
         grams += arrTokens[i + j] + ' ';     

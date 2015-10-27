@@ -10,8 +10,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** Stores the information of the passage.
- * Updated by JCasGen Sun Oct 18 15:12:09 EDT 2015
- * XML source: /Users/zhuyund/Documents/workspace/pi7-zhuyund/src/main/resources/descriptors/typeSystem.xml
+ * Updated by JCasGen Mon Oct 26 21:36:49 EDT 2015
+ * XML source: /Users/zhuyund/Documents/workspace/pi8-zhuyund/src/main/resources/descriptors/typeSystem.xml
  * @generated */
 public class Passage extends ComponentAnnotation {
   /** @generated

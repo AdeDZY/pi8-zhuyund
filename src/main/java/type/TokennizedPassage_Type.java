@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** Passage with tokens
- * Updated by JCasGen Sun Oct 18 15:12:09 EDT 2015
+ * Updated by JCasGen Mon Oct 26 21:36:49 EDT 2015
  * @generated */
 public class TokennizedPassage_Type extends Passage_Type {
   /** @generated 
@@ -68,6 +68,30 @@ public class TokennizedPassage_Type extends Passage_Type {
     ll_cas.ll_setRefValue(addr, casFeatCode_tokens, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_strTokens;
+  /** @generated */
+  final int     casFeatCode_strTokens;
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
+  public String getStrTokens(int addr) {
+        if (featOkTst && casFeat_strTokens == null)
+      jcas.throwFeatMissing("strTokens", "type.TokennizedPassage");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_strTokens);
+  }
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
+  public void setStrTokens(int addr, String v) {
+        if (featOkTst && casFeat_strTokens == null)
+      jcas.throwFeatMissing("strTokens", "type.TokennizedPassage");
+    ll_cas.ll_setStringValue(addr, casFeatCode_strTokens, v);}
+    
+  
 
 
 
@@ -83,6 +107,10 @@ public class TokennizedPassage_Type extends Passage_Type {
  
     casFeat_tokens = jcas.getRequiredFeatureDE(casType, "tokens", "uima.cas.StringList", featOkTst);
     casFeatCode_tokens  = (null == casFeat_tokens) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_tokens).getCode();
+
+ 
+    casFeat_strTokens = jcas.getRequiredFeatureDE(casType, "strTokens", "uima.cas.String", featOkTst);
+    casFeatCode_strTokens  = (null == casFeat_strTokens) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_strTokens).getCode();
 
   }
 }

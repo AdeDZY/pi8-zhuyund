@@ -11,8 +11,8 @@ import org.apache.uima.jcas.cas.StringList;
 
 
 /** Passage with tokens
- * Updated by JCasGen Sun Oct 18 15:12:09 EDT 2015
- * XML source: /Users/zhuyund/Documents/workspace/pi7-zhuyund/src/main/resources/descriptors/typeSystem.xml
+ * Updated by JCasGen Mon Oct 26 21:36:49 EDT 2015
+ * XML source: /Users/zhuyund/Documents/workspace/pi8-zhuyund/src/main/resources/descriptors/typeSystem.xml
  * @generated */
 public class TokennizedPassage extends Passage {
   /** @generated
@@ -96,6 +96,28 @@ public class TokennizedPassage extends Passage {
     if (TokennizedPassage_Type.featOkTst && ((TokennizedPassage_Type)jcasType).casFeat_tokens == null)
       jcasType.jcas.throwFeatMissing("tokens", "type.TokennizedPassage");
     jcasType.ll_cas.ll_setRefValue(addr, ((TokennizedPassage_Type)jcasType).casFeatCode_tokens, jcasType.ll_cas.ll_getFSRef(v));}    
+   
+    
+  //*--------------*
+  //* Feature: strTokens
+
+  /** getter for strTokens - gets 
+   * @generated
+   * @return value of the feature 
+   */
+  public String getStrTokens() {
+    if (TokennizedPassage_Type.featOkTst && ((TokennizedPassage_Type)jcasType).casFeat_strTokens == null)
+      jcasType.jcas.throwFeatMissing("strTokens", "type.TokennizedPassage");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((TokennizedPassage_Type)jcasType).casFeatCode_strTokens);}
+    
+  /** setter for strTokens - sets  
+   * @generated
+   * @param v value to set into the feature 
+   */
+  public void setStrTokens(String v) {
+    if (TokennizedPassage_Type.featOkTst && ((TokennizedPassage_Type)jcasType).casFeat_strTokens == null)
+      jcasType.jcas.throwFeatMissing("strTokens", "type.TokennizedPassage");
+    jcasType.ll_cas.ll_setStringValue(addr, ((TokennizedPassage_Type)jcasType).casFeatCode_strTokens, v);}    
   }
 
     
